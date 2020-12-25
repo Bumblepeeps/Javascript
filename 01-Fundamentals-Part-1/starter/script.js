@@ -123,7 +123,7 @@ const averageAge = (ageJonas + ageSara) / 2 //parenth calcs first
 console.log(averageAge)
 
 /////////////////////////////////////////////////////////////////
-// CODING CHALLENGE #1
+// 16. CODING CHALLENGE #1
 
 // // DATA SET 1:
 // let Mark = {
@@ -154,3 +154,18 @@ let JohnBMI = John.mass / John.height ** 2;
 console.log("Mark's BMI is " + MarkBMI + " and John's BMI is " + JohnBMI + ". So, is Mark's BMI greater than John's?");
 console.log(markHigherBMI = MarkBMI > JohnBMI);
 
+// // *****************17. STRINGS AND TEMPLATE LITERALS*****************
+const hisName = 'Jonas';
+const job = 'teacher';
+const birthYear = 1991;
+const year = 2037;
+const jonas = "He's " + hisName + ', a ' + (year - birthYear) + '-year-old ' + job + "!";
+console.log(jonas);
+//this is made easier with template literals. Backticks (shift + tilde) indicate a literal
+const jonasNew = `He's ${hisName}, a ${year - birthYear}-year-old ${job}!`;
+console.log(jonasNew);
+console.log(`Just a normal string...`); //can pretty much always use backticks so you don't have to think about which kind of quotes to use. 
+console.log('Just a normal \n\ multi - line \n\ string');
+console.log(`With backticks,  
+for multi-line string
+just hit enter!`);
