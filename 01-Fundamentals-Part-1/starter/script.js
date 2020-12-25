@@ -105,3 +105,20 @@ console.log(ageSarah >= 18);
 const isFullAge = ageSarah >= 18;
 console.log(isFullAge);
 console.log(currentYear - 1989 > currentYear - 1996);
+
+
+//***************** 15. OPERATOR PRECEDENCE*****************
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Table
+
+let x, y;
+x = y = 25 - 10 - 5; // x = y = 10
+console.log(x, y);
+//subtraction has higher precedence than assignment.
+const currentYear = 2037;
+const ageJonas = currentYear - 1991;
+const ageSara = currentYear - 2018;
+
+console.log(ageJonas, ageSara);
+const averageAge = (ageJonas + ageSara) / 2 //parenth calcs first
+console.log(averageAge)
+
