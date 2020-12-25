@@ -52,10 +52,10 @@ let age = 30
 age = age + 1
 console.log(age)
 
-const birthYear = 1991
-// birthYear = 1990 
+const yrBorn = 1991
+// yrBorn = 1990 
 //results in Error: Assignment to constant variable. *cannot assign a new value to a const. They are immutable. 
-// const job; 
+// const myJob; 
 // will result in Error: Missing initializer in const declaration. *cannot delcare empty
 
 /*
@@ -64,9 +64,9 @@ changing variables creates more bug potential.
 */
 
 // var is old way of delcaring variables prior to ES6. never use var
-var job = 'programmer'
-job = 'teacher'
-console.log(job)
+var myJob = 'programmer'
+myJob = 'teacher'
+console.log(myJob)
 
 // you COULD do this but don't because it doesn't define the variable within the proper scope.
 instructorLastName = 'Schmedtman'
@@ -158,14 +158,53 @@ console.log(markHigherBMI = MarkBMI > JohnBMI);
 const hisName = 'Jonas';
 const job = 'teacher';
 const birthYear = 1991;
-const year = 2037;
-const jonas = "He's " + hisName + ', a ' + (year - birthYear) + '-year-old ' + job + "!";
+const currYear = 2037;
+const jonas = "He's " + hisName + ', a ' + (currYear - birthYear) + '-year-old ' + job + "!";
 console.log(jonas);
 //this is made easier with template literals. Backticks (shift + tilde) indicate a literal
-const jonasNew = `He's ${hisName}, a ${year - birthYear}-year-old ${job}!`;
+const jonasNew = `He's ${hisName}, a ${currYear - birthYear}-year-old ${job}!`;
 console.log(jonasNew);
 console.log(`Just a normal string...`); //can pretty much always use backticks so you don't have to think about which kind of quotes to use. 
 console.log('Just a normal \n\ multi - line \n\ string');
 console.log(`With backticks,  
 for multi-line string
 just hit enter!`);
+
+// // *****************18. TAKING DECISIONS: IF / ELSE STATEMENTS*****************
+
+const howOld = 15;
+const isOldEnough = howOld >= 18;
+if (isOldEnough) {
+    console.log('You can start driving! 🚗')
+} else {
+    const yearsLeft = 18 - howOld;
+    console.log(`Sorry, you can't drive. 🛑 But you only have ${yearsLeft} years left!`)
+}
+
+//if/else statements are one type of CONTROL STRUCTURE : controls which blocks of code are executed (e.g. only if true, run this code)
+
+const yearBorn = 2012;
+let century;
+
+if (yearBorn <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+console.log(century);
+
+// if (condition) {
+//     code that executes if condition is true
+// } else {
+//     code that executes if condition is false
+// }
+
+// /////////////////////////////////////////////////////////////////
+// // 19. CODING CHALLENGE #2
+
+//requires one of the data sets from challenge #1 to be uncommented. 
+if (markHigherBMI = MarkBMI > JohnBMI) {
+    console.log(`Mark's BMI (${MarkBMI}) is higher than John's (${JohnBMI})`)
+} else {
+    console.log(`John's BMI (${JohnBMI}) is higher than Mark's (${MarkBMI})`)
+}
