@@ -7,8 +7,8 @@ console.log(40 + 8 + 23 - 10);
 console.log('jonas');
 console.log(23);
 
-let firstName = 'Honas'
-console.log(firstName + " is " + js);
+let instructorName = 'Honas'
+console.log(instructorName + " is " + js);
 /*
 CONVENTIONS FOR VARIABLE NAMES
 -camelCase yo.
@@ -28,7 +28,7 @@ console.log(jsIsFun)
 console.log(typeof true)
 console.log(typeof jsIsFun)
 console.log(typeof 23)
-console.log(typeof firstName)
+console.log(typeof instructorName)
 
 jsIsFun = 'YES!'
 //changing the value (don't need another let, it's already declared. )
@@ -69,8 +69,8 @@ job = 'teacher'
 console.log(job)
 
 // you COULD do this but don't because it doesn't define the variable within the proper scope.
-lastName = 'Schmedtman'
-console.log(lastName)
+instructorLastName = 'Schmedtman'
+console.log(instructorLastName)
 
 
 
@@ -110,15 +110,14 @@ console.log(currentYear - 1989 > currentYear - 1996);
 //***************** 15. OPERATOR PRECEDENCE*****************
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Table
 
-let x, y;
-x = y = 25 - 10 - 5; // x = y = 10
-console.log(x, y);
+let a, b;
+a = b = 25 - 10 - 5; // a = b = 10
+console.log(a, b);
 //subtraction has higher precedence than assignment.
-const currentYear = 2037;
-const ageJonas = currentYear - 1991;
-const ageSara = currentYear - 2018;
+const now = 2037;
+const ageJonas = now - 1991;
+const ageSara = now - 2018;
 
 console.log(ageJonas, ageSara);
 const averageAge = (ageJonas + ageSara) / 2 //parenth calcs first
 console.log(averageAge)
-
