@@ -121,3 +121,36 @@ const ageSara = now - 2018;
 console.log(ageJonas, ageSara);
 const averageAge = (ageJonas + ageSara) / 2 //parenth calcs first
 console.log(averageAge)
+
+/////////////////////////////////////////////////////////////////
+// CODING CHALLENGE #1
+
+// // DATA SET 1:
+// let Mark = {
+//     height: 1.69,
+//     mass: 78
+// }
+// let John = {
+//     height: 1.95,
+//     mass: 92
+// }
+
+// DATA SET 2:
+Mark = {
+    height: 1.88,
+    mass: 95
+}
+John = {
+    height: 1.76,
+    mass: 85
+}
+
+console.log('When Mark weighs ' + Mark.mass + 'kg and is ' + Mark.height + 'm tall,');
+console.log('And John weighs ' + John.mass + 'kg and is ' + John.height + 'm tall,');
+
+let MarkBMI = Mark.mass / Mark.height ** 2;
+let JohnBMI = John.mass / John.height ** 2;
+
+console.log("Mark's BMI is " + MarkBMI + " and John's BMI is " + JohnBMI + ". So, is Mark's BMI greater than John's?");
+console.log(markHigherBMI = MarkBMI > JohnBMI);
+
