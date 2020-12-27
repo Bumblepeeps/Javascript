@@ -1,3 +1,4 @@
+//***********************************************************************
 // *****************10. VALUES & VARIABLES*****************
 let js = 'amazing';
 console.log(40 + 8 + 23 - 10);
@@ -20,7 +21,7 @@ CONVENTIONS FOR VARIABLE NAMES
 -true constant can be all uppercase, e.g. PI = 3.1415
 -use descriptive variable names, 'myFirstJob' is better than 'job1'
 */
-
+//***********************************************************************
 // *****************12. DATA TYPES*****************
 let jsIsFun = true
 console.log(jsIsFun)
@@ -45,7 +46,7 @@ console.log(typeof year)//type is now number
 
 console.log(typeof null)
 
-
+//***********************************************************************
 // // *****************13. DECLARATION TYPES let, const, var*****************
 // // let - declares variables that will later be reassigned or mutated
 let age = 30
@@ -73,7 +74,7 @@ instructorLastName = 'Schmedtman'
 console.log(instructorLastName)
 
 
-
+//***********************************************************************
 // *****************14. BASIC OPERATORS*****************
 // operator allows us to transform or combine values (mathematical, comparison, assignment, logical, etc.)
 
@@ -106,7 +107,7 @@ const isFullAge = ageSarah >= 18;
 console.log(isFullAge);
 console.log(currentYear - 1989 > currentYear - 1996);
 
-
+//***********************************************************************
 //***************** 15. OPERATOR PRECEDENCE*****************
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Table
 
@@ -123,7 +124,7 @@ const averageAge = (ageJonas + ageSara) / 2 //parenth calcs first
 console.log(averageAge)
 
 /////////////////////////////////////////////////////////////////
-// 16. CODING CHALLENGE #1
+// *****************16. CODING CHALLENGE #1*****************
 
 // // DATA SET 1:
 // let Mark = {
@@ -153,7 +154,7 @@ let JohnBMI = John.mass / John.height ** 2;
 
 console.log("Mark's BMI is " + MarkBMI + " and John's BMI is " + JohnBMI + ". So, is Mark's BMI greater than John's?");
 console.log(markHigherBMI = MarkBMI > JohnBMI);
-
+//***********************************************************************
 // // *****************17. STRINGS AND TEMPLATE LITERALS*****************
 const hisName = 'Jonas';
 const job = 'teacher';
@@ -169,7 +170,7 @@ console.log('Just a normal \n\ multi - line \n\ string');
 console.log(`With backticks,  
 for multi-line string
 just hit enter!`);
-
+//***********************************************************************
 // // *****************18. TAKING DECISIONS: IF / ELSE STATEMENTS*****************
 
 const howOld = 15;
@@ -200,7 +201,7 @@ console.log(century);
 // }
 
 // /////////////////////////////////////////////////////////////////
-// // 19. CODING CHALLENGE #2
+// // 19. *****************CODING CHALLENGE #2*****************
 
 //requires one of the data sets from challenge #1 to be uncommented. 
 if (markHigherBMI = MarkBMI > JohnBMI) {
@@ -208,8 +209,8 @@ if (markHigherBMI = MarkBMI > JohnBMI) {
 } else {
     console.log(`John's BMI (${JohnBMI}) is higher than Mark's (${MarkBMI})`)
 }
-
-// // 20. TYPE CONVERSION AND COERCION
+//***********************************************************************
+// // *****************20. TYPE CONVERSION AND COERCION*****************
 //back to value types... types are fundamenal, conversion between types is common, string > number or # > boolean
 //conversion manually convert, vs coercion is js auto-converting type behind the scenes, implicitly
 //////////CONVERSION
@@ -236,7 +237,8 @@ let n = '1' + 1; //becomes 11 the string
 n = n - 1;//coerces to number
 console.log(n);//10
 
-// // 21. TRUTHY AND FALSY VALUES
+//***********************************************************************
+// // *****************21. TRUTHY AND FALSY VALUES*****************
 //falsey values are not false, but will become false when we try to convert to boolean. 
 //in js there are only 5 falsey values: 0, '', undefined, null, NaN
 //any other number or string will be true upon conversion to boolean
@@ -262,7 +264,8 @@ if (ice) {//when converted to a boolean
 } else { //the else statement is triggered by the falsey value
     console.log('ice cold baby. not defined.')
 }
-// // 22. EQUALITY OPERATORS == vs. ===
+//***********************************************************************
+// // *****************22. EQUALITY OPERATORS == vs. ===*****************
 //checking to see if two values are equal
 const ageZilla = '18';
 if (ageZilla === 18) {
@@ -290,3 +293,5 @@ else if (favorite === 7) {
 if (favorite !== 23) {
     console.log('Why not 23?')
 }
+//***********************************************************************
+// // *****************23. BOOLEAN LOGIC*****************
