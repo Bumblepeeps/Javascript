@@ -406,3 +406,15 @@ console.log(`I'm ${2020 - 1989} years old.`)//cannot insert an if statement insi
 
 //***********************************************************************
 // // *****************28. CONDITIONAL (TERNARY) OPERATOR*****************
+//like an if/else but all in one line!
+const jonasAge = 23;
+jonasAge >= 18 ? console.log('I like to drink wine 🍷🍷🍷') :
+    console.log('I like to drink water 💧💧💧');
+//condition ? if : else <---- 3 part operator - it produces a value, so it's an expression. 
+//Can then assign value to variable. 
+const drink =
+    jonasAge >= 18 ? 'wine 🍷' : 'water 💧';
+console.log(drink)
+
+console.log(`I like to drink ${jonasAge >= 18 ? 'vino 🍷' : 'wahtah 💧'}`);
+//ternary operators are expressions, so they can be used inside statements
