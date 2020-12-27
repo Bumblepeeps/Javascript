@@ -430,3 +430,28 @@ const tip =
         : bill * .20;
 
 console.log(`Bill: ${bill}, Tip: ${tip}, Total: ${bill + tip}`);
+
+/* 30. JavaScript Releases (notes)
+Need: interactive browsers / programming language for browser
+1995 - So, NetScape Navigator hired Brendan Eich, in 10 days wrote 1st v. JS. = Mocha
+1996 - renamed 'LiveScript' and then 'JavaScript'
+renamed to JavaScript to market to Java users (pure marketing)
+1996 - Microsoft launched IE, copied JS as 'JScript'. It was similar, but not the same.
+1997 - language submitted to International Standards organization ECMA
+ECMAScript1 = ES1 -- first standardized JavaScript!
+ECMAScript = the standard, JavaScript = the language in practice
+2009 - ES5 big release
+2015 - ES6 huge release (ES2015), annual release cycle: ES2016, ES2020, etc.
+
+Principle: Don't break the web!
+Backwards compatabilty to ES1 - our browser can still understand ES1.
+No feature subtractions, only additions are made in newer releases.
+Old websites will keep working forever.
+
+NOT Forwards compatable.
+To accommodate users with old browsers, we need to transpile and polyfill our code - can use a tool like BABEL - converts to ES5.
+ES5 works in all browsers - down to IE9 (2011)
+ES6+ any future = modern JS, it's well supported in all modern browsers
+
+ESNext = ES2021+
+*/
