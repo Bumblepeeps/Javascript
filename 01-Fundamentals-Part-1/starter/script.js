@@ -262,4 +262,31 @@ if (ice) {//when converted to a boolean
 } else { //the else statement is triggered by the falsey value
     console.log('ice cold baby. not defined.')
 }
+// // 22. EQUALITY OPERATORS == vs. ===
+//checking to see if two values are equal
+const ageZilla = '18';
+if (ageZilla === 18) {
+    console.log('Welcome to adulthood! (strict)')
+}
+if (ageZilla == 18) {
+    console.log('Welcome to adulthood! (loose)')
+}
+// = assignment // === strict comparison (will not coerce) // == loose comparison (coerces)
+//avoid loose equality operators because it can cause hard to find bugs. 
 
+const favorite = Number(prompt("What's your favorite number?"));//converts input to number
+console.log(favorite);
+console.log(typeof favorite);//string
+
+if (favorite === 23) {
+    console.log("Cool! 23 is great!");
+}//only works w strict operator because we converted the input text to number. This is best practice, rather than relying on loose operator. 
+else if (favorite === 7) {
+    console.log('7 is cool')
+} else {
+    console.log('Well okay, that is a number, at least')
+}
+// !== strict // != loose //always use strict, again.
+if (favorite !== 23) {
+    console.log('Why not 23?')
+}
