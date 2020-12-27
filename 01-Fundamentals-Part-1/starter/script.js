@@ -293,5 +293,30 @@ else if (favorite === 7) {
 if (favorite !== 23) {
     console.log('Why not 23?')
 }
+
 //***********************************************************************
 // // *****************23. BOOLEAN LOGIC*****************
+//boolean logic is a branch of computer science that uses true and false values to solve complex logical problems. // AND // OR // NOT
+
+const hasDriversLicense = true;
+const hasGoodVision = true;
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+// if (hasDriversLicense && hasGoodVision) {
+//     console.log("Sarah could drive us!")
+// } else {
+//     console.log("Someone else should drive...")
+// }
+
+const isTired = true;
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log("Sarah could drive us!")
+} else {
+    console.log("Someone else should drive...")
+}
+
+// /////////////////////////////////////////////////////////////////
+// // 25. *****************CODING CHALLENGE #3*****************
