@@ -277,22 +277,22 @@ if (ageZilla == 18) {
 // = assignment // === strict comparison (will not coerce) // == loose comparison (coerces)
 //avoid loose equality operators because it can cause hard to find bugs. 
 
-const favorite = Number(prompt("What's your favorite number?"));//converts input to number
-console.log(favorite);
-console.log(typeof favorite);//string
+// const favorite = Number(prompt("What's your favorite number?"));//converts input to number
+// console.log(favorite);
+// console.log(typeof favorite);//string
 
-if (favorite === 23) {
-    console.log("Cool! 23 is great!");
-}//only works w strict operator because we converted the input text to number. This is best practice, rather than relying on loose operator. 
-else if (favorite === 7) {
-    console.log('7 is cool')
-} else {
-    console.log('Well okay, that is a number, at least')
-}
-// !== strict // != loose //always use strict, again.
-if (favorite !== 23) {
-    console.log('Why not 23?')
-}
+// if (favorite === 23) {
+//     console.log("Cool! 23 is great!");
+// }//only works w strict operator because we converted the input text to number. This is best practice, rather than relying on loose operator. 
+// else if (favorite === 7) {
+//     console.log('7 is cool')
+// } else {
+//     console.log('Well okay, that is a number, at least')
+// }
+// // !== strict // != loose //always use strict, again.
+// if (favorite !== 23) {
+//     console.log('Why not 23?')
+// }
 
 //***********************************************************************
 // // *****************23. BOOLEAN LOGIC*****************
@@ -320,3 +320,26 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 
 // /////////////////////////////////////////////////////////////////
 // // 25. *****************CODING CHALLENGE #3*****************
+
+//test data --- No one wins.
+// const dolphinsAverage = (96 + 108 + 89) / 3;
+// const koalasAverage = (88 + 91 + 110) / 3;
+//test data bonus 1 --- Koalas Win!!!
+// const dolphinsAverage = (97 + 112 + 101) / 3;
+// const koalasAverage = (109 + 95 + 123) / 3;
+//test data bonus 2 --- DRAW!!!
+// const dolphinsAverage = (97 + 112 + 101) / 3;
+// const koalasAverage = (109 + 95 + 106) / 3;
+const dolphinsAverage = 99;
+const koalasAverage = 99;
+console.log('Dolphins: ' + dolphinsAverage + ', Koalas: ' + koalasAverage);
+
+if (dolphinsAverage < 100 && koalasAverage < 100) {//minimum score of 100
+    console.log('No one wins.😭')
+} else if (dolphinsAverage > koalasAverage) {//if dolphins score is greater than koalas
+    console.log('Dolphins win! 🏆 🐬')
+} else if (dolphinsAverage < koalasAverage) {
+    console.log('Koalas win! 🏆 🐨')
+} else if (dolphinsAverage === koalasAverage) {//if scores are equal
+    console.log('Draw! Both win trophy.🏆🏆')
+}
