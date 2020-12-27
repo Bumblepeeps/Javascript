@@ -236,3 +236,30 @@ let n = '1' + 1; //becomes 11 the string
 n = n - 1;//coerces to number
 console.log(n);//10
 
+// // 21. TRUTHY AND FALSY VALUES
+//falsey values are not false, but will become false when we try to convert to boolean. 
+//in js there are only 5 falsey values: 0, '', undefined, null, NaN
+//any other number or string will be true upon conversion to boolean
+console.log(Boolean(23));//true
+console.log(Boolean('astring'));//true
+console.log(Boolean(''));//false
+console.log(Boolean(0));//false
+console.log(Boolean(undefined));//false
+console.log(Boolean(null));//false
+console.log(Boolean(NaN));//false
+console.log(Boolean({}));//true -- empty object
+
+const money = 0;
+if (money) { //js will convert this to a boolean because it's in an if/else, will make it falsey
+    console.log("You got some dough ;)")
+} else {
+    console.log("You broke! :(")
+}
+
+let ice; //no value assigned, so it's unassigned. unassigned is a falsey value.
+if (ice) {//when converted to a boolean
+    console.log('Oh neat - Ice is defined!')
+} else { //the else statement is triggered by the falsey value
+    console.log('ice cold baby. not defined.')
+}
+
