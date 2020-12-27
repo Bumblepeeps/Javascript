@@ -208,3 +208,31 @@ if (markHigherBMI = MarkBMI > JohnBMI) {
 } else {
     console.log(`John's BMI (${JohnBMI}) is higher than Mark's (${MarkBMI})`)
 }
+
+// // 20. TYPE CONVERSION AND COERCION
+//back to value types... types are fundamenal, conversion between types is common, string > number or # > boolean
+//conversion manually convert, vs coercion is js auto-converting type behind the scenes, implicitly
+//////////CONVERSION
+//input on page for user to input birthyear. 
+const inputYear = '1991';
+console.log(inputYear + 18); //199118, because inputYear is a string
+console.log(Number(inputYear)); //1991
+console.log(Number(inputYear) + 18); //properly calcs 2009
+console.log(Number('What a String'));//NaN
+console.log(typeof NaN); //NaN is a number, it's just an invalid number.
+console.log(String(23));//logs as string
+//////////COERCION
+//type coercion happens when an operator is dealing with two values of diff types. JS will coerce the value types to match so the operation can be executed. 
+console.log('I am ' + 31 + ' years old') //here, 23 gets coerced to a string, same happens in template literals. ``
+//we don't have to say String(23) because js coerces. 
+
+console.log('23' - '10' - 3);//minus operator coerces in the other direction, from string to number. Changing these to plus results in 23103.
+console.log('23' * '2');//converted to numbers to make multiplier operator work. Same with division.
+
+//LOGICAL OPERATOR
+console.log('23' > '18');//true, comparison works as strings are coerced into numbers
+
+let n = '1' + 1; //becomes 11 the string
+n = n - 1;//coerces to number
+console.log(n);//10
+
