@@ -343,3 +343,66 @@ if (dolphinsAverage < 100 && koalasAverage < 100) {//minimum score of 100
 } else if (dolphinsAverage === koalasAverage) {//if scores are equal
     console.log('Draw! Both win trophy.🏆🏆')
 }
+//***********************************************************************
+// // *****************26. SWITCH STATEMENT*****************
+//like a simplified if else in which a single value is compared against multiple options. 
+
+const day = 'friday';
+switch (day) {
+    case 'monday': // day === 'monday' // strict comparison
+        console.log('Plan course structure');
+        console.log('Go to coding meetup');
+        break;
+    case 'tuesday':
+        console.log('Prepare theory videos');
+        break;
+    case 'wednesday':
+    case 'thursday':
+        console.log('Write code examples');
+        break;
+    case 'friday':
+        console.log('Record Videos');
+        break;
+    case 'saturday':
+    case 'sunday':
+        console.log('Enjoy the weekend!');
+        break;
+    default:
+        console.log('Not a valid day.')
+}
+
+if (day === 'monday') {
+    console.log('Plan course structure');
+    console.log('Go to coding meetup');
+} else if (day === 'tuesday') {
+    console.log('Prepare theory videos');
+} else if (day === 'wednesday' || day === 'thursday') {
+    console.log('Write code examples');
+} else if (day === 'friday') {
+    console.log('Record Videos');
+} else if (day === 'saturday' || day === 'sunday') {
+    console.log('Enjoy the weekend!');
+} else {
+    console.log('Not a valid day!')
+}
+
+//***********************************************************************
+// // *****************27. EXPRESSIONS AND STATEMENTS*****************
+
+//EXPRESSION is a piece of code that produces a value
+3 + 4
+2000
+true && false && !false
+
+//STATEMENT is a bigger piece of code that is executed and does not produce a value by itself
+if (23 > 10) {
+    const str = '23 is bigger';
+}//doesn't produce a value, only declares a variable called 'str'
+
+//like sentences, a declaration is a sentence / statement, and the expressions are the words that make up the sentence / statement. ends in a semicolon. 
+
+//JS expects statements and expressions in diff places, e.g. in a template literal, you can only have expressions, not statements. 
+console.log(`I'm ${2020 - 1989} years old.`)//cannot insert an if statement inside this template literal.
+
+//***********************************************************************
+// // *****************28. CONDITIONAL (TERNARY) OPERATOR*****************
