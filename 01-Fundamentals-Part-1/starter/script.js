@@ -418,3 +418,15 @@ console.log(drink)
 
 console.log(`I like to drink ${jonasAge >= 18 ? 'vino 🍷' : 'wahtah 💧'}`);
 //ternary operators are expressions, so they can be used inside statements
+//perfect for quick decisions, but if/else still needed.
+
+// /////////////////////////////////////////////////////////////////
+// // 29. *****************CODING CHALLENGE #4*****************
+//not allowed to use an if/else, use ternary operator. 
+const bill = 430;
+const tip =
+    bill >= 50 && bill <= 300
+        ? bill * .15
+        : bill * .20;
+
+console.log(`Bill: ${bill}, Tip: ${tip}, Total: ${bill + tip}`);
