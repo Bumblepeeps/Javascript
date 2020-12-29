@@ -44,7 +44,46 @@ console.log(`mixed Juice is: ${mixedJuice}`);
 
 const num = Number('22'); // Number is a built-in js function, so is "log"
 
+//*******************************************************
+// // *****************34. Function Declarations vs Expressions*****************
+// function produces a value which can be stored in a variable.
+// we'll calculate age based on a given birthYear
 
+//FUNCTION DECLARATIONS - like declaring a variable, can be called before the function is declared in the code
+function calcAge1(birthYear) { //input birthYear
+    return 2020 - birthYear; //return the value of subtracting birthYear from current year
+};
+const age1 = calcAge1(1991)
+console.log(age1); //log the returned value from the function.
+
+// //FUNCTION EXPRESSIONS -- cannot be called before it is expressed.
+const calcAge2 =
+    function (birthYear) {//anonymous function (without a name)
+        return 2020 - birthYear;
+    };
+const age2 = calcAge2(1993);
+console.log(age1, age2); //log the returned value from the function.
+
+//will learn about hoisting later... impacts when you can call a function. 
+//which type of function should I use? Often based on preference. Expressions require each to be assigned a variable and require being expressed before being called / cleaner code.
+
+//*******************************************************
+// // *****************35. Arrow Functions*****************
+//Arrow function
+const calcAge3 = birthYear => 2020 - birthYear;
+//easier and faster to write, no need for curly braces to define a code block, return happens implicitly, value is automatically returned without the return line. 
+const age3 = calcAge3(1995);
+console.log(age3);
+
+//how to lose the advantage of the arrow function: multiple lines within function.
+const yearsUntilRetirement = (birthYear, firstName) => {
+    const age = 2020 - birthYear;
+    const retirement = 65 - age;
+    // return retirement;
+    return `${firstName} retires in ${retirement} years.`
+}
+console.log(yearsUntilRetirement(1989, 'Rachel'));
+console.log(yearsUntilRetirement(1996, 'Benji'));
 
 
 
