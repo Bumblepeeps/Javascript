@@ -67,6 +67,7 @@ console.log(age1, age2); //log the returned value from the function.
 //will learn about hoisting later... impacts when you can call a function. 
 //which type of function should I use? Often based on preference. Expressions require each to be assigned a variable and require being expressed before being called / cleaner code.
 
+/*
 //*******************************************************
 // // *****************35. Arrow Functions*****************
 //Arrow function
@@ -84,6 +85,7 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 }
 console.log(yearsUntilRetirement(1989, 'Rachel'));
 console.log(yearsUntilRetirement(1996, 'Benji'));
+*/
 
 //*******************************************************
 // // *****************36. Functions calling other functions*****************
@@ -103,6 +105,29 @@ console.log(fruitProcessor(2, 3));
 
 //*******************************************************
 // // *****************37. Reviewing Functions*****************
+const currentYear = 2020
+
+const calcAge = function (birthYear) {
+    return currentYear - birthYear;
+}
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+    const age = calcAge(birthYear);
+    const retirement = 65 - age;
+
+    if (retirement > 0) {
+        return retirement; //return will immediately exit the function. The function has returned.
+        console.log(`${firstName} retires in ${retirement} years.`);//ignored, bc function has been returned.
+    } else {
+        console.log(`${firstName} has already retired. 🎉`); //not ignored because function has not yet been returned for people who have already retired.
+        return -1;
+    }
+}
+console.log(yearsUntilRetirement(1985, 'Daniel'));
+console.log(yearsUntilRetirement(1945, 'Mike'));
+
+
+
 
 
 
