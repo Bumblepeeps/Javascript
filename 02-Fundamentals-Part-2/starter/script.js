@@ -85,6 +85,24 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 console.log(yearsUntilRetirement(1989, 'Rachel'));
 console.log(yearsUntilRetirement(1996, 'Benji'));
 
+//*******************************************************
+// // *****************36. Functions calling other functions*****************
+//pretty common, but tough
+
+function cutFruitPieces(fruit) {
+    return fruit * 3;
+}
+//the processor is small and requires cutting up the fruit first. 
+function fruitProcessor(apples, oranges) {
+    const applePieces = cutFruitPieces(apples)
+    const orangePieces = cutFruitPieces(oranges)
+    const juice = `Juice with ${applePieces} pieces of apples and ${orangePieces} pieces of orange.`;
+    return juice; //becomes the result of running this function
+}
+console.log(fruitProcessor(2, 3));
+
+//*******************************************************
+// // *****************37. Reviewing Functions*****************
 
 
 
