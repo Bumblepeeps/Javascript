@@ -164,3 +164,38 @@ scoreKoalas = calcAverage(23, 34, 27);
 // console.log(`Data set 2 Scores -- Dolphins: ${scoreDolphins} Koalas: ${scoreKoalas}`);
 
 console.log(`${checkWinner(scoreDolphins, scoreKoalas)} wins! ${scoreDolphins} to ${scoreKoalas}`);
+
+//*******************************************************
+// // *****************39. Introduction to Arrays*****************
+
+const friend1 = 'Caleph';
+const friend2 = 'Rachel';
+const friend3 = 'Becca';
+//literal syntax
+const friends = ['Caleph', 'Rachel', 'Becca'];
+console.log(friends[0]);
+
+const y = new Array(1991, 1984, 2008, 2020);
+console.log(y[1]);
+console.log(friends.length);
+//to get last item in an array, just account for arrays starting with 0, and length being absolute count of items.
+//inside of square brackets, js expects an expression, not a statement.
+console.log(friends[friends.length - 1]);
+
+//mutate the array, add or remove
+friends[2] = 'Jake';
+console.log(friends);
+
+const firstName = 'Jonas';
+const jonas = [firstName, 'Schmedtmann', 2037 - 1991, 'teacher', friends];
+console.log(jonas);
+// Exercise
+const years = [1990, 1967, 2002, 2010, 2018];
+const ageA = calcAge(years[0]);
+const ageB = calcAge(years[1]);
+const ageC = calcAge(years[years.length - 1]);
+console.log(ageA, ageB, ageC);
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
+console.log(ages);
+
+

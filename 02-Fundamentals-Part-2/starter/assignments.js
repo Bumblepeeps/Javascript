@@ -62,3 +62,12 @@ describePopulation('Mexico', 74854895);
 
 
 console.log(`**Introduction to Arrays:**`);
+const populations = [37590000, 74895, 74854895, 3482];
+console.log(populations.length === 4);
+const percentages = [
+    percentageOfWorld1(populations[0]),
+    percentageOfWorld1(populations[1]),
+    percentageOfWorld1(populations[2]),
+    percentageOfWorld1(populations[3])
+]
+console.log(percentages);
