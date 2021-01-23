@@ -194,6 +194,7 @@ const years = [1990, 1967, 2002, 2010, 2018];
 const ageA = calcAge(years[0]);
 const ageB = calcAge(years[1]);
 const ageC = calcAge(years[years.length - 1]);
+console.log(`AGES:::::`);
 console.log(ageA, ageB, ageC);
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 console.log(ages);
@@ -241,7 +242,31 @@ if (friends.includes('Peter')) {
 else {
     console.log(`Peter is not your friend`);
 }
+/**/
+// ////////////////////////////////////////////////////////////
+// // 41. *****************CODING CHALLENGE #2*****************
+//Tip calculator. Tip 15% If bill between 50 and 300. Otherwise, tip 20%. 
+//1. function called calcTip taking any bill value as input and returns corresponding tip. 
 
+function calcTip(bill) {
+    return bill >= 50 && bill <= 300 ? bill * .15 : bill * .20;
+}
+//testing that the function works:
+let tip = calcTip(301);
+console.log(`Tip: ${tip}`);
 
+//now use arrays
 
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 
+console.log(`Tips: ${tips}`);
+console.log(tips);
+
+const totals = [
+    bills[0] + tips[0],
+    bills[1] + tips[1],
+    bills[2] + tips[2]
+];
+
+console.log(`Totals: ${totals}`)
