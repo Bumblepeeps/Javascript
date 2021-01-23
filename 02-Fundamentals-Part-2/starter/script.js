@@ -199,3 +199,49 @@ const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length -
 console.log(ages);
 
 
+//*******************************************************
+// // *****************40. Basic Array Operations (Methods)*****************
+//push = add to end -- push is a method/function, which can also do some work. 
+
+const newLength = friends.push('Rebecca'); //returns the **length of the array.**
+console.log(friends);
+console.log(newLength);
+//unshift = add to beginning
+friends.unshift('John'); //if logged, would return the unshifted (added to beginning) element 'John' 
+console.log(friends);
+//pop = remove from end / last item
+const popped = friends.pop(); //returns the popped element text 'Rebecca'
+console.log(friends);
+console.log(popped);
+//shift = remove from beginning
+friends.shift(); // if logged, would return the shifted element ' John'
+console.log(friends);
+
+//RECAP:
+//push = end, add
+//pop = end, remove
+//unshift = start, add
+//shift = start, remove
+
+//to log the index of a specified element:
+console.log(friends.indexOf('Rachel'));//returns 1 (2nd item in array)
+console.log(friends.indexOf('Jerk'));//not in array, so returns -1
+
+//includes - instead of returning the index of given element, will simply return true or false based on element's existence in the array.
+console.log(friends.includes('Rachel'));//true
+console.log(friends.includes('Jerk'));//false
+//uses strict equality for this check
+friends.push(23);
+console.log(friends.includes('23'));//false because no type coercion - this is checking for 23 the string. 
+console.log(friends.includes(23));//true
+//can use the include method for conditionals
+if (friends.includes('Peter')) {
+    console.log(`You have a friend called Peter`);
+}
+else {
+    console.log(`Peter is not your friend`);
+}
+
+
+
+
