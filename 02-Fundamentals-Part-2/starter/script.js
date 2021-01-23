@@ -269,4 +269,18 @@ const totals = [
     bills[2] + tips[2]
 ];
 
-console.log(`Totals: ${totals}`)
+console.log(`Totals: ${totals}`);
+
+//*******************************************************
+// // *****************42. Introduction to Objects*****************
+//Objects are another data structure in JS, in addition to Arrays. Consist of key value pairs.
+const chris = {
+    firstName: 'Chris',
+    lastName: 'Jones',
+    age: 2020 - 1989,
+    job: 'automation engineer',
+    friends: ['Ben', 'Jason', 'Batman']
+}
+//object literal syntax ^ bc we're literally writing the object content into the code.
+
+console.log(chris.firstName, chris.lastName);
