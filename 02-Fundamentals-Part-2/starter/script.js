@@ -332,10 +332,24 @@ const jon = {
     job: 'udemy teacher',//string value
     friends: ['Michael', 'Peter', 'Steven', 'Clawman'],
     hasDriversLicense: true,//boolean value
-    //function value
-    calcAge: function (birthYear) {
-        return 2037 - birthYear;
+    // //function value - commenting out for new function
+    // calcAge: function (birthYear) {
+    //     return 2037 - birthYear;
+    // }
+    // calcAge: function () { //removing parameter, bc gonna read birthYear directly from object using 'this'
+    //     return 2037 - this.birthYear;
+    // }
+
+    calcAge: function () { //removing parameter, bc gonna read birthYear directly from object using 'this'
+        this.age = 2037 - this.birthYear
+        return this.age;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}-yr-old ${this.job} and he has ${this.hasDriversLicense ? 'a' : 'no'} Driver's License`
     }
+
+
 };
 
 //any function that is attached to an object is called a method. We assign the "calcAge" key a value output from the method above.
@@ -344,7 +358,17 @@ const jon = {
 //function calcAge(birthYear) {
 //     2037 - birthYear;
 // }
+console.log(jon.calcAge());
+console.log(jon.age);
+console.log(jon.age);
+console.log(jon.age);
 
-console.log(jon.calcAge(1991));
-console.log(jon.calcAge(jon.birthYear));
-console.log(jon['calcAge'](jon.birthYear));
+// console.log(jon.calcAge(jon.birthYear));
+// console.log(jon['calcAge'](jon.birthYear));
+
+
+//Challenge / Exercise
+//"Name is a X- yr old --job-- , and he has a/no driverslicense"
+// const hasLicense = ;
+
+console.log(jon.getSummary());
