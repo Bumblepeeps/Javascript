@@ -301,16 +301,16 @@ console.log(chris['last' + nameKey]); //Jones
 //OR with template literal:
 console.log(chris[`last${nameKey}`]); //Jones
 
-const interestedIn =
-    prompt(`what do you want to know about Chris? Choose between firstName, lastName, age, job and friends`);
+// const interestedIn =
+//     prompt(`what do you want to know about Chris? Choose between firstName, lastName, age, job and friends`);
 
-// console.log(chris[interestedIn]); //first time I did this, I put interestedIn as a string. That doesn't work, duh.
+// // console.log(chris[interestedIn]); //first time I did this, I put interestedIn as a string. That doesn't work, duh.
 
-if (chris[interestedIn]) {
-    console.log(chris[interestedIn]);
-} else {
-    console.log(`I don't know that much... Choose between firstName, lastName, age, job and friends.`);
-}
+// if (chris[interestedIn]) {
+//     console.log(chris[interestedIn]);
+// } else {
+//     console.log(`I don't know that much... Choose between firstName, lastName, age, job and friends.`);
+// }
 
 //Adding new properties to object
 
@@ -322,3 +322,29 @@ chris['WowHandle'] = 'Adjasont';
 //`Chris has 3 friends and his best friend is Rachel.`
 
 console.log(`${chris.firstName} has ${chris.friends.length} friends and his best friend is ${chris.friends[0]}. His WoW handle is ${chris.WowHandle}.`)
+
+//*******************************************************
+// // *****************44. Object Methods*****************
+const jon = {
+    firstName: 'Jon',
+    lastName: 'Schmedtmann',
+    birthYear: 1991,
+    job: 'udemy teacher',//string value
+    friends: ['Michael', 'Peter', 'Steven', 'Clawman'],
+    hasDriversLicense: true,//boolean value
+    //function value
+    calcAge: function (birthYear) {
+        return 2037 - birthYear;
+    }
+};
+
+//any function that is attached to an object is called a method. We assign the "calcAge" key a value output from the method above.
+
+//Could not have used a function declaration, like below, only a function expression as above. 
+//function calcAge(birthYear) {
+//     2037 - birthYear;
+// }
+
+console.log(jon.calcAge(1991));
+console.log(jon.calcAge(jon.birthYear));
+console.log(jon['calcAge'](jon.birthYear));
