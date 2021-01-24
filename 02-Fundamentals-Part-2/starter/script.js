@@ -279,8 +279,46 @@ const chris = {
     lastName: 'Jones',
     age: 2020 - 1989,
     job: 'automation engineer',
-    friends: ['Ben', 'Jason', 'Batman']
-}
+    friends: ['Rachel', 'Ben', 'Jason', 'Batman']
+};
 //object literal syntax ^ bc we're literally writing the object content into the code.
-
+console.log(chris);
 console.log(chris.firstName, chris.lastName);
+//*******************************************************
+// // *****************43. Dot vs. Bracket Notation*****************
+//will learn how to retrive and change data from objects
+//DOT notation:
+console.log(chris.firstName, chris.lastName);
+//I guess I already knew how to do dot notation. 
+
+//BRACKET notation:
+console.log(chris['job']);
+
+//within the square brackets, we can put any expression. We can retrive the property by concatenation for example:
+const nameKey = 'Name';
+console.log(chris['first' + nameKey]); //Chris
+console.log(chris['last' + nameKey]); //Jones
+//OR with template literal:
+console.log(chris[`last${nameKey}`]); //Jones
+
+const interestedIn =
+    prompt(`what do you want to know about Chris? Choose between firstName, lastName, age, job and friends`);
+
+// console.log(chris[interestedIn]); //first time I did this, I put interestedIn as a string. That doesn't work, duh.
+
+if (chris[interestedIn]) {
+    console.log(chris[interestedIn]);
+} else {
+    console.log(`I don't know that much... Choose between firstName, lastName, age, job and friends.`);
+}
+
+//Adding new properties to object
+
+chris.state = 'Virginia';
+chris['WowHandle'] = 'Adjasont';
+// console.log(chris);
+
+//Exercise / Challenge
+//`Chris has 3 friends and his best friend is Rachel.`
+
+console.log(`${chris.firstName} has ${chris.friends.length} friends and his best friend is ${chris.friends[0]}. His WoW handle is ${chris.WowHandle}.`)
