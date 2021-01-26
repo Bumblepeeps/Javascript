@@ -410,3 +410,16 @@ const fatter = (john.calcBMI > mark.calcBMI) ?
     console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})`);
 
 
+//*******************************************************
+// // *****************46. Iteration: The for Loop*****************
+//a Loop is a Control Structure - fundamental to automating repetitive tasks. 
+
+//we will assign the initial value of the counter to a variable inside () - must be let because it will be updated by the for loop!!
+//separate by semicolon - then, add the logical condition evaluted befor each iterartion fo the loop is executed
+//for loop keeps running while condition is TRUE
+
+//for(initial value of counter; logical condition to run loop, increase the value of the counter)
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetitation ${rep} 💪`)
+};
+
