@@ -372,3 +372,41 @@ console.log(jon.age);
 // const hasLicense = ;
 
 console.log(jon.getSummary());
+
+//bridge between methods and objects::::
+//in this lecture we created our own methods to use on objects, but arrays are objects with built-in methods for manipulation like push, pop, shift, unshift.
+
+// ////////////////////////////////////////////////////////////
+// // 45. *****************CODING CHALLENGE #3*****************
+/*
+compare BMIs of Mark and John using objects
+BMI = mass/height ** 2
+John Smith and Mark Miller 
+*/
+
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () { //no paramters, taking data directly from the object
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+}
+
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+}
+
+mark.calcBMI(); john.calcBMI();
+const fatter = (john.calcBMI > mark.calcBMI) ?
+    console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})`) :
+    console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})`);
+
+
