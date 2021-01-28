@@ -461,3 +461,22 @@ for (let i = 0; i < jonasArray.length; i++) {
         break;
     console.log(jonasArray[i], typeof jonasArray[i]);
 }
+
+//*******************************************************
+// // *****************48. Looping Backwards and Loops in Loops*****************
+
+// 0, 1, ..., 4
+// 4, 3, ..., 0
+console.log(`--- Looping Backwards ---`)
+for (let i = jonasArray.length - 1; i >= 0; i--) {
+    console.log(i, jonasArray[i])
+}
+
+//gym reps, 3 exercises, each w 5 reps. 
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`---- starting exercise ${exercise}`);
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Exercise: ${exercise}: --- rep ${rep}🏋️‍♀️`);
+    }
+}
+
