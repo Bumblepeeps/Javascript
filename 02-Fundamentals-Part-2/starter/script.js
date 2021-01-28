@@ -422,4 +422,42 @@ const fatter = (john.calcBMI > mark.calcBMI) ?
 for (let rep = 1; rep <= 10; rep++) {
     console.log(`Lifting weights repetitation ${rep} 💪`)
 };
+//*******************************************************
+// // *****************47. Looping Arrays, Breaking and Continuing*****************
+const jonasArray = ['Jonas', 'Schmedtmann', 2037 - 1991, 'teacher', ['Michael', 'Peter', 'Steven'], true];
 
+
+const types = [];
+for (let i = 0; i < jonasArray.length; i++) {
+    //reading from array
+    console.log(jonasArray[i], typeof jonasArray[i]);
+    //filling types array
+    types.push([typeof jonasArray[i]])
+    // types[i] = typeof jonasArray[i]; //or this
+}
+
+console.log(types);
+
+
+const birthYears = [1996, 1989, 1955, 2007];
+const allAges = [];
+for (let i = 0; i < birthYears.length; i++) {
+    allAges.push(2020 - birthYears[i])
+}
+console.log(allAges);
+
+//********continue and break********
+//CONTINUE = exit the current iteration of the loop and continue to the next one
+//BREAK = completely terminate the whole loop
+console.log('--- ONLY STRINGS (CONTINUE IF NOT A STRING) ---')
+for (let i = 0; i < jonasArray.length; i++) {
+    if (typeof jonasArray[i] !== 'strings')
+        continue;
+    console.log(jonasArray[i], typeof jonasArray[i]);
+}
+console.log('--- BREAK WITH NUMBER ---')
+for (let i = 0; i < jonasArray.length; i++) {
+    if (typeof jonasArray[i] === 'number')
+        break;
+    console.log(jonasArray[i], typeof jonasArray[i]);
+}
