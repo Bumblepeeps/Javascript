@@ -497,3 +497,38 @@ while (dice !== 6) {
         console.log(`Loop is about to end... you rolled a ${dice}`);
     }
 }
+
+// ////////////////////////////////////////////////////////////
+// // 50. *****************CODING CHALLENGE #4*****************
+/*
+improved tip calcultor
+*/
+
+const bells = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let teps = [];
+let tatals = [];
+
+function calcTips(bell) {
+    return bell >= 50 && bell <= 300 ? bell * .15 : bell * .20;
+}
+
+for (let i = 0; i < bells.length; i++) {
+    let tep = calcTips(bells[i]);
+    teps.push(tep);
+    tatals.push(bells[i] + teps[i]);
+    console.log(`Bell: ${bells[i]} Tep: ${tep} Total: ${tatals[i]} `);
+}
+console.log(bells, teps, tatals);
+
+//BONUS
+
+function calculateAverage(anyArray) {
+    let sum = 0;
+    for (let i = 0; i < anyArray.length; i++) {
+        sum += anyArray[i];
+    }
+    return sum / anyArray.length;
+};
+
+console.log(`Average Tatal: ${calculateAverage(tatals)}`);
+console.log(`Average Teps: ${calculateAverage(teps)}`);
