@@ -479,4 +479,21 @@ for (let exercise = 1; exercise < 4; exercise++) {
         console.log(`Exercise: ${exercise}: --- rep ${rep}🏋️‍♀️`);
     }
 }
+//*******************************************************
+// // *****************49. The While Loop*****************
+let rep = 1;
+while (rep <= 10) {
+    console.log(`WHILE: Lighting weights repetition ${rep}🧨`);
+    rep++;
+}
+//while loop is more versatile because it doesn't need a counter. e.g.: a random variable
+//roll a dice until we roll a 6.
 
+let dice = Math.trunc(Math.random() * 6) + 1;
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) {
+        console.log(`Loop is about to end... you rolled a ${dice}`);
+    }
+}
