@@ -30,8 +30,18 @@ run: npm install live-server -g
 run: live-server
 */
 
+// 57. Learning How to Code
+/*
+Set a Goal: I want to become a front-end web developer within 1 year. I want to find a better job. 
+Imagine a big project: How about a web-based capacity calculator - idea written in yellow notepad.
+Everything is awesome, Cliff of confusion, Pit of despair, back to awesome, competence.
+Write code on your own, do mini projects. 
+Learn with other people and share progress.
+Keep challenging yourself. 
+*/
+// 58. How to think like a dev: problem solve!
 ///////////////////////////////////////
-// Using Google, StackOverflow and MDN
+// 59. Using Google, StackOverflow and MDN
 
 // PROBLEM 1:
 // We work for a company building a smart home thermometer. Our most recent task is this: "Given an array of temperatures of one day, calculate the temperature amplitude. Keep in mind that sometimes there might be a sensor error."
@@ -89,3 +99,6 @@ const calcTempAmplitudeNew = function (t1, t2) {
 };
 const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]);
 console.log(amplitudeNew);
+
+const myHeading = document.querySelector('h1');
+myHeading.textContent = 'Developer Skills & Editor Setup';
