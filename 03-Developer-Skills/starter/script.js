@@ -43,6 +43,10 @@ Keep challenging yourself.
 ///////////////////////////////////////
 // 59. Using Google, StackOverflow and MDN
 
+/*
+
+
+
 // PROBLEM 1:
 // We work for a company building a smart home thermometer. Our most recent task is this: "Given an array of temperatures of one day, calculate the temperature amplitude. Keep in mind that sometimes there might be a sensor error."
 
@@ -99,6 +103,49 @@ const calcTempAmplitudeNew = function (t1, t2) {
 };
 const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]);
 console.log(amplitudeNew);
-
+*/
 const myHeading = document.querySelector('h1');
 myHeading.textContent = 'Developer Skills & Editor Setup';
+///////////////////////////////////////
+// 61. Debugging with the Console and Breakpoints
+const measureKelvin = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'celsius',
+    // C) FIX BUG: convert string to number
+    // value: Number(prompt('Enter degrees celsius:')),
+    value: 10,
+  };
+  // B) FIND BUG: saw that value was a string
+  console.log(measurement);
+  console.table(measurement);
+  // console.log(measurement.value);
+  // console.warn(measurement.value);
+  // console.error(measurement.value);
+
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+// A) IDENTIFY BUG
+console.log(measureKelvin());
+
+//USING A DEBUGGER FOR BIGGER BUG ************************************************
+const calcTempAmplitudeBug = function (t1, t2) {
+  const temps = t1.concat(t2);
+  console.log(temps);
+  let max = 0;
+  let min = 0;
+  for (let i = 0; i < temps.length; i++) {
+    const curTemp = temps[i];
+    if (typeof curTemp !== 'number') continue;
+    // debugger;
+    if (curTemp > max) max = curTemp;
+    if (curTemp < min) min = curTemp;
+  }
+  console.log(`Maximum: ${max} Minimum: ${min}`);
+  return max - min;
+};
+// A) IDENTIFY BUG
+const amplitudeBug = calcTempAmplitudeBug([3, 5, 1], [9, 4, 5]);
+console.log(amplitudeBug);
+//FYI, bug not fixed.
