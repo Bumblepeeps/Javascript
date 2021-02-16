@@ -130,22 +130,64 @@ const measureKelvin = function () {
 console.log(measureKelvin());
 
 //USING A DEBUGGER FOR BIGGER BUG ************************************************
-const calcTempAmplitudeBug = function (t1, t2) {
-  const temps = t1.concat(t2);
-  console.log(temps);
-  let max = 0;
-  let min = 0;
-  for (let i = 0; i < temps.length; i++) {
-    const curTemp = temps[i];
-    if (typeof curTemp !== 'number') continue;
-    // debugger;
-    if (curTemp > max) max = curTemp;
-    if (curTemp < min) min = curTemp;
+// const calcTempAmplitudeBug = function (t1, t2) {
+//   const temps = t1.concat(t2);
+//   console.log(temps);
+//   let max = 0;
+//   let min = 0;
+//   for (let i = 0; i < temps.length; i++) {
+//     const curTemp = temps[i];
+//     if (typeof curTemp !== 'number') continue;
+//     // debugger;
+//     if (curTemp > max) max = curTemp;
+//     if (curTemp < min) min = curTemp;
+//   }
+//   console.log(`Maximum: ${max} Minimum: ${min}`);
+//   return max - min;
+// };
+// // A) IDENTIFY BUG
+// const amplitudeBug = calcTempAmplitudeBug([3, 5, 1], [9, 4, 5]);
+// console.log(amplitudeBug);
+// //FYI, bug not fixed.
+
+///////////////////////////////////////
+// 62. CODING CHALLENGE #1
+
+/*
+Given an array of forecasted maximum temperatures, the thermometer displays a string with these temperatures.
+
+Example: [17, 21, 23] will print "... 17ºC in 1 days ... 21ºC in 2 days ... 23ºC in 3 days ..."
+
+Create a function 'printForecast' which takes in an array 'arr' and logs a string like the above to the console.
+
+Use the problem-solving framework: Understand the problem and break it up into sub-problems!
+
+TEST DATA 1: [17, 21, 23]
+TEST DATA 2: [12, 5, -5, 0, 4]
+*/
+
+/*Understanding the problem:
+ Need to have an array of temperatures (of any length) print into a sentence the temp and day (starting with day 1)
+Print the forecast as one string.
+
+
+Breaking it into subproblems:
+1. create Array
+2. Transform the Array to a single String
+3. Transform each element to a string with °C Alt + 0176 at the end. 
+4. String needs to contain day (index+1)
+5. Add ... between elements  and start and end of it
+*/
+
+let data1 = [17, 21, 23, -1];
+let data2 = [12, 5, -5, 0, 4];
+
+function printForecast(arr) {
+  let str = '';
+  for (let i = 0; i < arr.length; i++) {
+    str += `It is ${arr[i]}°C on day ${i + 1} ... `;
   }
-  console.log(`Maximum: ${max} Minimum: ${min}`);
-  return max - min;
-};
-// A) IDENTIFY BUG
-const amplitudeBug = calcTempAmplitudeBug([3, 5, 1], [9, 4, 5]);
-console.log(amplitudeBug);
-//FYI, bug not fixed.
+  console.log(`... ` + str);
+}
+printForecast(data1);
+printForecast(data2);
