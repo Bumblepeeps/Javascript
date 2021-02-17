@@ -41,10 +41,21 @@ document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess);
   if (!guess) {
+    //When there is no input (or 0)
     document.querySelector('.message').textContent = '🔞 No Number! ';
   } else if (secretNumber === guess) {
+    //When player wins
     document.querySelector('.message').textContent = `Yes - that's correct! 👌`;
+    // 75. Manipulating CSS Styles
+    //change the backgroundColor and width of number
+    //use style property
+    //target css property with camelCase
+    //value must always be a string
+    document.querySelector('body').style.backgroundColor = '#60b347';
+    document.querySelector('.number').style.width = '30rem';
   } else if (guess > secretNumber) {
+    //when guess is too high
+
     if (score > 1) {
       document.querySelector('.message').textContent = `Too High! 📈`;
       score--;
@@ -53,6 +64,8 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.message').textContent = `💥You Lose!!!!`;
     }
   } else if (guess < secretNumber) {
+    //when guess is too low
+
     if (score > 1) {
       document.querySelector('.message').textContent = `Too Low! 📉`;
       score--;
