@@ -31,10 +31,10 @@ official DOM specification browsers implement, means DOM manipulation works in a
 ///////////////////////////////////////////////
 /* 73. Handling Click Events */
 //event listener reacts
-const secretNumber = Math.trunc(Math.random() * 20) + 1;
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
 // * 20 makes decimal between 0 and 1 = numbers between 0 and 20, then +1 to ensure no 0s.
 let score = 20;
-document.querySelector('.number').textContent = secretNumber;
+// document.querySelector('.number').textContent = secretNumber;
 
 document.querySelector('.check').addEventListener('click', function () {
   /* 74. Implementing the Game Logic */
@@ -46,6 +46,7 @@ document.querySelector('.check').addEventListener('click', function () {
   } else if (secretNumber === guess) {
     //When player wins
     document.querySelector('.message').textContent = `Yes - that's correct! 👌`;
+    document.querySelector('.number').textContent = secretNumber;
     // 75. Manipulating CSS Styles
     //change the backgroundColor and width of number
     //use style property
@@ -74,4 +75,23 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.message').textContent = `💥You Lose!!!!`;
     }
   }
+});
+
+////////////////////// Coding Challenge #1 ////////////////////
+/*
+1. Select element with 'again' class and attach a click event handler
+2. In the handler function, restore initial values of score and number variables
+3. Restore initial conditions of the message, number, score and guess input field
+4. Also restore theo riginal background color to #222 and number width 15rem. 
+
+*/
+document.querySelector('.again').addEventListener('click', function () {
+  score = 20;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  document.querySelector('.message').textContent = `Start guessing...`;
+  document.querySelector('.score').textContent = score;
+  document.querySelector('.number').textContent = `?`;
+  document.querySelector('.guess').value = '';
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
 });
