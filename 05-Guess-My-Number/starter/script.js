@@ -31,12 +31,34 @@ official DOM specification browsers implement, means DOM manipulation works in a
 ///////////////////////////////////////////////
 /* 73. Handling Click Events */
 //event listener reacts
-let randomNumber = 22;
+const secretNumber = Math.trunc(Math.random() * 20) + 1;
+// * 20 makes decimal between 0 and 1 = numbers between 0 and 20, then +1 to ensure no 0s.
+let score = 20;
+document.querySelector('.number').textContent = secretNumber;
+
 document.querySelector('.check').addEventListener('click', function () {
+  /* 74. Implementing the Game Logic */
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess);
-
   if (!guess) {
     document.querySelector('.message').textContent = '🔞 No Number! ';
+  } else if (secretNumber === guess) {
+    document.querySelector('.message').textContent = `Yes - that's correct! 👌`;
+  } else if (guess > secretNumber) {
+    if (score > 1) {
+      document.querySelector('.message').textContent = `Too High! 📈`;
+      score--;
+      document.querySelector('.score').textContent = score;
+    } else {
+      document.querySelector('.message').textContent = `💥You Lose!!!!`;
+    }
+  } else if (guess < secretNumber) {
+    if (score > 1) {
+      document.querySelector('.message').textContent = `Too Low! 📉`;
+      score--;
+      document.querySelector('.score').textContent = score;
+    } else {
+      document.querySelector('.message').textContent = `💥You Lose!!!!`;
+    }
   }
 });
