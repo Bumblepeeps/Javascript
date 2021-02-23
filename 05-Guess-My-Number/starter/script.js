@@ -38,6 +38,12 @@ let highscore = 0;
 const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
 };
+const setScore = function (score) {
+  document.querySelector('.score').textContent = score;
+};
+const displayAgainBtn = function (displayType) {
+  document.querySelector('.again').style.display = displayType;
+};
 
 document.querySelector('.check').addEventListener('click', function () {
   /* 74. Implementing the Game Logic */
@@ -63,17 +69,18 @@ document.querySelector('.check').addEventListener('click', function () {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
     }
-    document.querySelector('.again').style.display = 'block';
+    displayAgainBtn('block');
   } else if (guess !== secretNumber) {
     if (score > 1) {
       score--;
-      document.querySelector('.score').textContent = score;
+      setScore(score);
       // document.querySelector('.message').textContent =
       //   guess < secretNumber ? `Too Low! 📉` : `Too High! 📈`;
       displayMessage(guess < secretNumber ? `Too Low! 📉` : `Too High! 📈`);
     } else {
       displayMessage(`💥You Lose!!!!`);
-      document.querySelector('.score').textContent = 0;
+      setScore(0);
+      displayAgainBtn('block');
     }
   }
   // else if (guess > secretNumber) {
@@ -106,12 +113,12 @@ document.querySelector('.check').addEventListener('click', function () {
 4. Also restore theo riginal background color to #222 and number width 15rem. 
 
 */
-document.querySelector('.again').style.display = 'none';
+displayAgainBtn('none');
 document.querySelector('.again').addEventListener('click', function () {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
   displayMessage(`Start guessing...`);
-  document.querySelector('.score').textContent = score;
+  setScore(score);
   document.querySelector('.number').textContent = `?`;
   document.querySelector('.guess').value = '';
   document.querySelector('body').style.backgroundColor = '#222';
