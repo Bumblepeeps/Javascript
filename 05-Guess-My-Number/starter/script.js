@@ -34,6 +34,7 @@ official DOM specification browsers implement, means DOM manipulation works in a
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 // * 20 makes decimal between 0 and 1 = numbers between 0 and 20, then +1 to ensure no 0s.
 let score = 20;
+let highscore = 0;
 // document.querySelector('.number').textContent = secretNumber;
 
 document.querySelector('.check').addEventListener('click', function () {
@@ -54,9 +55,14 @@ document.querySelector('.check').addEventListener('click', function () {
     //value must always be a string
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
+    //set highscore
+    if (score > highscore) {
+      highscore = score;
+      document.querySelector('.highscore').textContent = highscore;
+    }
+    document.querySelector('.again').style.display = 'block';
   } else if (guess > secretNumber) {
     //when guess is too high
-
     if (score > 1) {
       document.querySelector('.message').textContent = `Too High! 📈`;
       score--;
@@ -85,6 +91,7 @@ document.querySelector('.check').addEventListener('click', function () {
 4. Also restore theo riginal background color to #222 and number width 15rem. 
 
 */
+document.querySelector('.again').style.display = 'none';
 document.querySelector('.again').addEventListener('click', function () {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;

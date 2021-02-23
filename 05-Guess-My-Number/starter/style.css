@@ -77,9 +77,10 @@ h1 {
 }
 
 .again {
-  position: absolute;
-  top: 2rem;
+  width: 80%;
+  bottom: 2rem;
   left: 2rem;
+  margin-bottom: 2rem;
 }
 
 .guess {
@@ -110,7 +111,7 @@ h1 {
 }
 
 .message {
-  margin-bottom: 8rem;
+  margin-bottom: 3rem;
   height: 3rem;
 }
 
